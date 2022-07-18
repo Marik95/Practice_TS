@@ -40,3 +40,25 @@ const throwError3 = (message: string): void => {
     }
 }
 
+//Destructorization in Type Script
+
+const todayWeathe = {
+    date: new Date(),
+    weather: "sunny"
+}
+
+
+const logWeather = (forecast: {date: Date, weather: string}): void => {
+    console.log(forecast.date);
+    console.log(forecast.weather);
+}
+
+//ES2015 examp. with destructorization
+const logWeather2 = ({date, weather}: {date: Date, weather: string}): void => {
+    console.log(date);
+    console.log(weather);
+}
+
+
+
+
