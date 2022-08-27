@@ -1,12 +1,13 @@
 import {} from "google-maps";
 
 // Instructions to other classes how to be an argument for 'addMarker'
-interface Mappable {
+export interface Mappable {
     location: {
         lat: number;
         lng: number;
     };
     markerContent(): string;
+    color: string;
 }
 
 export class CustomMap{
