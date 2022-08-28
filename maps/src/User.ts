@@ -1,4 +1,4 @@
-import faker from 'faker';
+import faker from 'faker/dist/faker.js';
 
 export class User {
     name: string;
