@@ -353,3 +353,4 @@ MigrationBackup/
 # ============== My own rules =============
 # dist directory because it change on every parcel running
 dist/
+sort/build/
