@@ -356,3 +356,5 @@ dist/
 sort/build/
 stats/build/
 stats/*.html
+
+server/build
