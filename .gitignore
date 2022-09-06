@@ -355,3 +355,4 @@ MigrationBackup/
 dist/
 sort/build/
 stats/build/
+stats/*.html
