@@ -41,3 +41,28 @@ function printAnything<T>(arr: T[]): void {
         console.log(arr[i]);
     }
 }
+
+
+// Generic Constrains
+
+class Human {
+    print() {
+        console.log('I am a human');
+    }
+}
+
+class Robot {
+    print() {
+        console.log('I am a robot');
+    }
+}
+
+interface Printable {
+    print(): void;
+}
+
+function printAnything1<T extends Printable>(arr: T[]): void {
+    for (let i = 0; i <arr.length; i++ ){
+        arr[i].print();
+    }
+} 
