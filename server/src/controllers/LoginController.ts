@@ -1,7 +1,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 
 
-class loginController {
+class LoginController {
 
 getLogin(req: Request, res: Response): void{
         res.send(`
