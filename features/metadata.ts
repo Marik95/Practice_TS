@@ -10,20 +10,10 @@ class Car {
     }
 }
 
-function printMetadata(target: typeof Car){
-    for(let key in target.prototype) {
-        const info = Reflect.getMetadata('info', target.prototype, key);
-        console.log(key);
-    }
-    // console.log(target.prototype);
-}
-
 
 function markFunction(secretInfo: string){
     return function(target: Car, key: string){
         Reflect.defineMetadata('info', secretInfo, target, key);
-        // const info = Reflect.getMetadata('info', target, key);
-        // console.log(info);
     }
 }
 
@@ -31,6 +21,18 @@ function markFunction(secretInfo: string){
 
 // console.log(info);
 
+function printMetadata(target: typeof Car){
+    let targetObj = Object.getOwnPropertyNames(target.prototype)
+    console.log(targetObj);
+    for(let value of targetObj) {
+        console.log(value);
+        const info = Reflect.getMetadata('info', target.prototype, value);
+        if(info){
+            console.log(info);
+        }
+        
+    }    
+}
 
 
 
